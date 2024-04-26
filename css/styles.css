@@ -1,0 +1,443 @@
+/*La estructura de la pagina es la seguent
+            Navbar
+            Imatge amb text a sobre
+            Seccio main amb el contingut de la pagina
+            Footer
+*/
+:root {
+    --back: 255, 255, 255;
+    --letra: 0;
+}
+
+@media(prefers-color-scheme:dark) {
+    :root {
+        --back: 0, 0, 0;
+        --letra: 255, 255, 255;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*Propietats del body i html*/
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0 0 0 0;
+    background-color: var(--back);
+    color: var(--letra);
+}
+
+/*Codi CSS del menu de navegacio de la pagina*/
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    background-color: #0e1111;
+    height: 6.6vh;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+nav a {
+    color: white;
+    font-size: 1.3vw;
+    text-decoration: none;
+    margin-left: 4vw;
+    margin-right: 4vw;
+    transition: all 0.3s ease-in-out;
+}
+
+nav a:hover {
+    transform: rotate3d(1, 2, -1, 360deg);
+    transition: all 0.7s ease-in-out;
+    color: yellow;
+}
+
+/*Propietats de la imatge de la pagina principal*/
+container.img img {
+    width: 100%;
+    height: 40vw;
+    filter: brightness(40%);
+}
+
+
+/*Text sobre la imatge (Titol)*/
+
+@keyframes example {
+    0% {
+        color: orange;
+        top: 100%;
+        left: 15%;
+        opacity: 0;
+    }
+
+    25% {
+        color: rgb(226, 159, 35);
+        opacity: 0;
+    }
+
+    50% {
+        color: orange;
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        color: white;
+        top: 30%;
+        left: 15%;
+    }
+}
+
+div.titol {
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    color: white;
+    font-size: 4vw;
+    animation-name: example;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+container.img h1 {
+    font-size: 4vw;
+}
+
+container.img h3 {
+    font-size: 2.6vw;
+}
+
+/*------------------------*/
+/*Mesures del main que es el contenidor principal del contingut de la pagina*/
+main {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+/*Maqeutacio amb float de les imatges amb el text al costat*/
+img#camaron {
+    float: left;
+    width: 20vw;
+    height: 18vw;
+}
+
+img#gambas {
+    float: right;
+    width: 25vw;
+    height: 20vw;
+    border: 1px solid #12203E;
+    border-radius: 10px;
+    margin-left: 5%;
+}
+
+div.nos {
+    margin-bottom: 15%;
+}
+
+/*Font size de tots els tipus de text*/
+h2 {
+    font-size: 3vw;
+}
+
+p {
+    font-size: 1.3vw;
+}
+
+span {
+    font-weight: bolder;
+    font-size: 4vw;
+}
+
+h3 {
+    font-size: 1.5vw;
+}
+
+/*CSS del gird i totes les seves Grid-areas definides*/
+grid {
+    display: grid;
+    grid-template-columns: 20% 40% 40%;
+    grid-template-areas:
+        "titol titol titol"
+        "menu1 c1 c1"
+        "menu1 i1 i2"
+        "menu2 c2 c2"
+        "menu2 i3 i4"
+    ;
+    grid-gap: 10px;
+}
+
+div#menu {
+    grid-area: titol;
+    background-color: #12203E;
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+    font-weight: bold;
+    border: 3px solid black;
+}
+
+div#menu1 {
+    grid-area: menu1;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.3vw;
+    background-color: #12203E;
+    color: white;
+}
+
+div#menu2 {
+    grid-area: menu2;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.3vw;
+    background-color: #12203E;
+    color: white;
+}
+
+div#content1 {
+    grid-area: c1;
+}
+
+div#content2 {
+    grid-area: c2;
+}
+
+div#img1 {
+    grid-area: i1;
+}
+
+div#img2 {
+    grid-area: i2;
+}
+
+div#img3 {
+    grid-area: i3;
+}
+
+div#img4 {
+    grid-area: i4;
+}
+
+/*La galeria de imatges amb la etiqueta galery amb flex i les imatges del bluelobster amb els seu hover*/
+galery {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+div.lobster {
+    overflow: hidden;
+    height: 10vw;
+    width: 10vw;
+    background-color: black;
+    border-radius: 4px;
+    margin: 2vw 2vw 2vw 2vw;
+}
+
+img.lobster {
+    height: 100%;
+    width: 100%;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    transition: all 3s ease-in-out;
+}
+
+img.lobster:hover {
+    transition: all 5s ease-in-out;
+    transform: rotate(30deg);
+    filter: grayscale(80%);
+    scale: 1.5;
+}
+
+
+/*Estil del footer PS: Alguns estils els he posat inline en els elements del footer*/
+footer {
+    background-color: #12203E;
+    color: white;
+    width: 100%;
+    height: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+div.end {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: 35px;
+    font-weight: bold;
+    margin-right: 2vw;
+}
+
+
+/*Aquesta seccio es per fer les etiquetes que surten a sota de les imatges he hagut de fer servir 2 divs amb les seguents classes*/
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 20.5vw;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    opacity: 1;
+    color: white;
+    font-size: 1.3vw;
+    padding: 1.3vw;
+    text-align: center;
+    width: 100%;
+    border: 0.2px black;
+    border-radius: 10px;
+}
+
+/* CSS media querys per a fer la pàgina responsive*/
+@media only screen and (max-width: 768px) {
+    nav {
+        justify-content: flex-start;
+    }
+
+    container.img h1 {
+        top: 15%;
+        left: 10%;
+    }
+
+    container.img h3 {
+        top: 20%;
+        left: 10%;
+    }
+
+    main {
+        margin-left: 12%;
+        margin-right: 12%;
+    }
+
+    img#camaron {
+        width: 100%;
+        height: 32vw;
+
+    }
+
+    img#gambas {
+        width: 100%;
+        height: 32vw;
+    }
+
+    galery {
+        flex-direction: column;
+        height: 70vw;
+    }
+
+    div.end {
+        display: none;
+    }
+
+    footer {
+        justify-content: center;
+    }
+
+    grid {
+        grid-template-areas:
+            "titol titol titol"
+            "menu1 c1 c1"
+            "menu1 i1 i1"
+            "menu1 i2 i2"
+            "menu2 c2 c2"
+            "menu2 i3 i3"
+            "menu2 i4 i4"
+        ;
+    }
+
+    div#img1 {
+        margin-left: 20vw;
+    }
+
+    div#img2 {
+        margin-left: 20vw;
+    }
+
+    div#img3 {
+        margin-left: 20vw;
+    }
+
+    div#img4 {
+        margin-left: 20vw;
+    }
+
+
+    @media only screen and (max-width: 576px) {
+        main {
+            text-align: center;
+            margin-left: 1%;
+            margin-right: 1%;
+        }
+
+        galery {
+            height: 150vw;
+        }
+
+        grid {
+            grid-template-areas:
+                "menu1 menu1 menu1"
+                "c1 c1 c1"
+                "i1 i1 i1"
+                "i2 i2 i2"
+                "menu2 menu2 menu2"
+                "c2 c2 c2"
+                "i3 i3 i3"
+                "i4 i4 i4"
+            ;
+        }
+
+        div#img1 {
+            margin-left: 36vw;
+        }
+
+        div#img2 {
+            margin-left: 36vw;
+        }
+
+        div#img3 {
+            margin-left: 36vw;
+        }
+
+        div#img4 {
+            margin-left: 36vw;
+        }
+
+        div#menu {
+            display: none;
+        }
+
+    }
+}

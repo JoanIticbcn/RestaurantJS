@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Restaurant don camaron</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script> 
+        $(document).ready(function(){
+          $("#sobre-nosaltres").click(function(){
+            $("#nosaltres").slideToggle("slow");
+          });
+        });
+        </script>
+</head>
+
+<body>
+    <nav>
+        <a href="#nosaltres">Nosaltres</a>
+        <a href="#carta">Carta</a>
+        <a href="#galeria">Galeria</a>
+    </nav>
+    <container class="img">
+        <picture>
+            <source media="(min-width:768px)" srcset="img/pesca.jpg">
+            <source media="(min-width:576px)" srcset="img/res.jpg">
+            <img src="img/gambas.jpg" alt="Gambas">
+        </picture>
+        <div class="titol">
+            <h1>Restaurant <span>Don Camaron</span> </h1>
+            <h3><i>El millor restaurant de gambas</i></h3>
+        </div>
+
+    </container>
+    <main>
+        <h2 id="sobre-nosaltres">Sobre nosaltres</h2>
+        <section id="nosaltres">
+            <div class="nos"><img id="camaron" src="img/camaron.jpg" alt="logo del restaurant">
+                <p style="padding-top: 12px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ultrices
+                    tincidunt ipsum cursus
+                    vehicula. Maecenas sit amet nisl odio. Aliquam sollicitudin scelerisque neque quis iaculis. Quisque
+                    nisl nunc, tempor quis ultrices blandit, accumsan eget sem. Nunc et eros commodo, tempus quam eu,
+                    cursus augue. Ut ornare arcu quam, a molestie velit lobortis in. Praesent pharetra libero tincidunt
+                    magna fermentum hendrerit. Curabitur vestibulum sapien quis risus laoreet, sagittis venenatis leo
+                    egestas. Curabitur a erat aliquam, pellentesque nisl quis, aliquet turpis. In hac habitasse platea
+                    dictumst. Pellentesque lorem nisl, accumsan quis suscipit sed, venenatis.</p>
+
+            </div>
+            <div class="nos">
+                <img id="gambas" src="img/gambas.jpg" alt="Paella de gambas de don camaron">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ultrices tincidunt ipsum cursus
+                    vehicula.
+                    Maecenas sit amet nisl odio. Aliquam sollicitudin scelerisque neque quis iaculis. Quisque nisl nunc,
+                    tempor quis ultrices blandit, accumsan eget sem. Nunc et eros commodo, tempus quam eu, cursus augue.
+                    Ut
+                    ornare arcu quam, a molestie velit lobortis in. Praesent pharetra libero tincidunt magna fermentum
+                    hendrerit. Curabitur vestibulum sapien quis risus laoreet, sagittis venenatis leo egestas. Curabitur
+                    a
+                    erat aliquam, pellentesque nisl quis, aliquet turpis. In hac habitasse platea dictumst. Pellentesque
+                    lorem nisl, accumsan quis suscipit sed, venenatis.</p>
+            </div>
+        </section>
+        <section id="carta">
+            <h2>Carta</h2>
+            <grid>
+                <div id="menu">
+                    <p>Menú</p>
+                </div>
+                <div id="menu1">Menu 1</div>
+                <div id="menu2">Menu 2</div>
+                <div id="content1">
+                    <h3>Contingut</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ultrices tincidunt ipsum cursus
+                        vehicula.
+                        Maecenas sit amet nisl odio. Aliquam sollicitudin scelerisque neque quis iaculis. Quisque nisl
+                        nunc,
+                        tempor quis ultrices blandit, accumsan eget sem. Nunc et eros commodo, tempus quam eu, cursus
+                        augue.</p>
+                </div>
+                <div id="content2">
+                    <h3>Contingut</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ultrices tincidunt ipsum cursus
+                        vehicula.
+                        Maecenas sit amet nisl odio. Aliquam sollicitudin scelerisque neque quis iaculis. Quisque nisl
+                        nunc,
+                        tempor quis ultrices blandit, accumsan eget sem. Nunc et eros commodo, tempus quam eu, cursus
+                        augue.</p>
+                </div>
+
+                <div class="container" id="img1">
+                    <img style="height: 18vw; width: 23vw; border: 1px solid black; border-radius: 10px;"
+                        src="img/pesca.jpg" alt="plat del nostre restaurant" id="1">
+                    <div class="overlay">Salmon</div>
+                </div>
+                <div class="container" id="img2">
+                    <img style="height: 18vw; width: 23vw; border: 1px solid black; border-radius: 10px;"
+                        src="img/pesca.jpg" alt="plat del nostre restaurant" id="2">
+                    <div class="overlay">Gambas</div>
+                </div>
+                <div class="container" id="img3">
+                    <img style="height: 18vw; width: 23vw; border: 1px solid black; border-radius: 10px;"
+                        src="img/pesca.jpg" alt="plat del nostre restaurant" id="3">
+                    <div class="overlay">Marisco</div>
+                </div>
+                <div class="container" id="img4">
+                    <img style="height: 18vw; width: 23vw; border: 1px solid black; border-radius: 10px;"
+                        src="img/pesca.jpg" alt="plat del nostre restaurant" id="4">
+                    <div class="overlay">Pulpo a la gallega</div>
+                </div>
+            </grid>
+        </section>
+        <section id="galeria">
+            <h2 style="margin-top: 9vw;">Galeria d'imatges</h2>
+            <galery>
+                <div class="lobster"><img id="l1" class="lobster" src="img/bluelobster.jpg" alt="bluelobster"></div>
+                <div class="lobster"><img class="lobster" src="img/bluelobster.jpg" alt="bluelobster"></div>
+                <div class="lobster"><img class="lobster" src="img/bluelobster.jpg" alt="bluelobster"></div>
+                <div class="lobster"><img class="lobster" src="img/bluelobster.jpg" alt="bluelobster"></div>
+                <div class="lobster"><img id="l5" class="lobster" src="img/bluelobster.jpg" alt="bluelobster"></div>
+                <div class="lobster"><img id="l6" class="lobster" src="img/bluelobster.jpg" alt="bluelobster"></div>
+                <div class="lobster"> <img class="lobster" src="img/bluelobster.jpg" alt="bluelobster"></div>
+                <div class="lobster"><img class="lobster" src="img/bluelobster.jpg" alt="bluelobster"></div>
+                <div class="lobster"><img class="lobster" src="img/bluelobster.jpg" alt="bluelobster"></div>
+                <div class="lobster"><img id="l8" class="lobster" src="img/bluelobster.jpg" alt="bluelobster"></div>
+            </galery>
+
+        </section>
+    </main>
+    <footer>
+        <i class="material-icons md-12" style="margin-left: 2vw;">email</i>
+        <p style="padding-left: 10px;padding-right: 10px;">doncamaron@yahoo.com</p>
+        <i class="material-icons md-12">phone</i>
+        <p style="padding-left: 10px;padding-right: 10px; width: 25vw;">+69 699 45 43 05</p>
+        <div class="end">
+            <p>Restaurant Don Camaron</p>
+        </div>
+    </footer>
+</body>
+
+</html>
