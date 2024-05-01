@@ -320,7 +320,10 @@ div.end {
     border: 0.2px black;
     border-radius: 10px;
 }
-
+section#video{
+    display: flex;
+    justify-content: center;
+}
 /* CSS media querys per a fer la pàgina responsive*/
 @media only screen and (max-width: 768px) {
     nav {
