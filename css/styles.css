@@ -320,10 +320,45 @@ div.end {
     border: 0.2px black;
     border-radius: 10px;
 }
-section#video{
+
+section#video {
     display: flex;
     justify-content: center;
 }
+
+video {
+    display: block;
+}
+
+div.videocontainer {
+    position: relative;
+    width: 100%;
+    background-color: black;
+}
+
+div.controlador {
+    z-index: 10;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    /* Black see-through */
+    color: #f1f1f1;
+    width: 90%;
+    transition: .5s ease;
+    opacity: 0;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+div.videocontainer:hover .controlador {
+    opacity: 1;
+}
+
 /* CSS media querys per a fer la pàgina responsive*/
 @media only screen and (max-width: 768px) {
     nav {
