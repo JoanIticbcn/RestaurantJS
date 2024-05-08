@@ -1,5 +1,9 @@
 var video = document.getElementById('vid');
 
+function playvideo(){
+    video.play();
+}
+
 document.getElementById('play').addEventListener('click', ()=> {
     video.play();
 });
