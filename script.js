@@ -5,11 +5,13 @@ function playvideo(){
 }
 
 document.getElementById('play').addEventListener('click', ()=> {
-    video.play();
-});
-
-document.getElementById('pause').addEventListener('click', ()=> {
-    video.pause();
+    if(video.paused){
+        video.play();
+        document.getElementById('play').innerHTML('play_circle');
+    }else{
+        video.pause();
+        document.getElementById('play').innerHTML('pause_circle');
+    }
 });
 
 document.getElementById('vup').addEventListener('click', ()=> {
