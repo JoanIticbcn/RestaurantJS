@@ -7,10 +7,10 @@ function playvideo(){
 document.getElementById('play').addEventListener('click', ()=> {
     if(video.paused){
         video.play();
-        document.getElementById('play').innerHTML('play_circle');
+        document.getElementById('play').innerHTML='play_circle';
     }else{
         video.pause();
-        document.getElementById('play').innerHTML('pause_circle');
+        document.getElementById('play').innerHTML='pause_circle';
     }
 });
 
