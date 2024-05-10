@@ -43,6 +43,11 @@ nav {
     transition: 0.4s;
 }
 
+span#star{
+    transition: 0.4s;
+
+}
+
 nav a {
     color: white;
     font-size: 1.3vw;

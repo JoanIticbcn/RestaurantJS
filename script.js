@@ -1,9 +1,14 @@
 var video = document.getElementById('vid');
 var nav = document.getElementById('nav');
+var star = document.getElementById('star');
 
 function playvideo(){
     video.play();
     document.getElementById('play').innerHTML = 'pause_circle';
+}
+
+function rotateStar(){
+    star.style.transform = "rotate(" + 2 + "deg)";
 }
 
 window.onscroll = function () { scrollFunction() };
@@ -13,9 +18,11 @@ function scrollFunction() {
         nav.style.height = "3.3vh";
         nav.style.backgroundColor="red";
         playvideo();
+        rotateStar();
     }else {
         nav.style.height = "6.6vh";
         nav.style.backgroundColor="#0e1111";
+        rotateStar();
     }
 }
 
